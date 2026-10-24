@@ -17,6 +17,8 @@ The palette follows the existing app; no runtime UI changes are required.
 | [Raster infographic](../assets/signal-flow.png) | PNG, 1440 × 1120 | README and sharing |
 | [Social card](../assets/social-card.png) | PNG, 1200 × 630 | Repository social preview, uploaded manually |
 | [Source illustration](../assets/hero-art.png) | PNG | Text-free background artwork |
+| [Showcase illustrations](../assets/showcase/) | Ten WebP cards, 1600 × 900 each | Three exhibit views and seven field worlds |
+| [Showcase manifest](showcase.json) | JSON | Titles, captions, image descriptions, and scenario mapping |
 
 ## Palette and type
 
@@ -41,6 +43,13 @@ SVG for resizing; avoid stretching, recoloring, or placing it over busy artwork.
 The hero is an AI-generated illustration made for this project, not a
 microscope image, app screenshot, measured neural graph, or anatomical reference.
 The mark is a geometric symbol, not a specimen drawing.
+
+The ten showcase cards are also AI-generated concept art, made with the hero
+illustration as a style reference. They cover Habitat, Macro, Brain, and every
+field world. Their exact titles and captions were typeset separately. Each card
+is labeled **not a screenshot or recorded data**. In particular, the Brain card's
+neural geometry is invented, and scent plumes and waypoint trails are visual
+metaphors. The actual app uses procedural 3D scenes.
 
 The infographic is an authored schematic based on `observatory.py` and the
 README. Its measured/engineered distinction is intentional. A decoder test score
@@ -67,3 +76,9 @@ The mark and infographic remain editable as SVG. To refresh their PNG exports,
 open each SVG in a browser at its declared pixel size and capture the viewport
 at device scale 1 with no surrounding page margins. Review all labels after
 editing before replacing the checked-in PNG.
+
+Showcase cards are self-contained WebP exports with no external image service
+or embedded metadata. Their original generated PNGs and the local compositing
+helper remain in ignored `artifacts/`; they are not required to view the public
+gallery. The manifest records the captions, image descriptions, and scenario
+coverage without including machine-specific paths or raw generator responses.

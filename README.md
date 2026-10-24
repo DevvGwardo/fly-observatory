@@ -8,8 +8,19 @@ A live, non-racing showcase: a detailed procedural 3D fly seeks or avoids a ligh
 using a full signed connectome reservoir and a trained linear steering decoder.
 Switch to Brain view to inspect measured spikes at real recorded cell coordinates.
 
-[Launch](#launch-on-this-mac) · [How it works](#how-it-works) ·
+[Launch](#launch-on-this-mac) · [Views](#three-ways-to-watch) · [How it works](#how-it-works) ·
 [Field simulations](#field-simulations) · [Scientific boundaries](#scientific-boundaries)
+
+## Three ways to watch
+
+**Concept illustrations, not app screenshots.** These images introduce the
+exhibit's views in the same visual style as the banner. They are not anatomical
+references or recordings of neural activity; the app's actual rendering differs.
+
+| Habitat | Macro | Brain |
+| --- | --- | --- |
+| ![Concept illustration of a fly and amber target in a glass habitat.](docs/assets/showcase/habitat.webp) | ![Concept illustration of compound eyes, bristles, and wing veins.](docs/assets/showcase/macro.webp) | ![Invented insect neural constellation, not actual connectome geometry or recorded data.](docs/assets/showcase/brain.webp) |
+| Follow an engineered light cue. Neural output changes heading. | Inspect the procedural body, gait, eyes, wings, and bristles. | Inspect measured spikes at 16,000 sampled real cell locations. |
 
 ## How it works
 
@@ -139,6 +150,20 @@ without retraining. Selection takes over from the director. **D** or **Auto
 director** restores the repeating broadcast. Refresh an existing OBS browser
 source after installing an updated frontend.
 
+The gallery below is **illustrative concept art**, not screenshots or evidence
+of natural fly behavior. Plumes, waypoint trails, and threat lighting are visual
+metaphors for engineered adapters. The real simulation uses procedural 3D scenes.
+
+| Windfall orchard | Follow the scent |
+| --- | --- |
+| ![Concept illustration of a fruit fly approaching fallen orchard fruit.](docs/assets/showcase/orchard.webp) | ![Concept illustration of a fly facing a symbolic amber odor plume.](docs/assets/showcase/scent.webp) |
+| **Spider escape** | **Dangerous picnic** |
+| ![Concept illustration of a fly moving away from a scripted spider threat.](docs/assets/showcase/spider.webp) | ![Concept illustration of a fly, picnic fruit, and an approaching swatter before contact.](docs/assets/showcase/picnic.webp) |
+| **Between the stones** | **Weather the gusts** |
+| ![Concept illustration of a fly between rocks with a symbolic preselected waypoint route.](docs/assets/showcase/stones.webp) | ![Concept illustration of a fly sheltering beneath a leaf while wind passes outside.](docs/assets/showcase/gusts.webp) |
+| **Midnight porch** | **One shared controller** |
+| ![Concept illustration of a fly near two warm lamps on wooden boards at night.](docs/assets/showcase/porch.webp) | Every field world uses the same frozen reservoir and trained decoder. The cues, physical rules, and game objectives are engineered, not claims of innate behavior. |
+
 | World | What happens |
 | --- | --- |
 | Windfall orchard | Visit four fallen-fruit patches, with proximity/dwell-based rewards. |
@@ -248,4 +273,6 @@ The [brand kit](docs/brand/README.md) includes the
 [SVG fly mark](docs/assets/logo.svg), an
 [editable infographic](docs/assets/signal-flow.svg), and a
 [1200 × 630 social card](docs/assets/social-card.png).
+The [showcase manifest](docs/brand/showcase.json) describes all ten
+[concept illustrations](docs/assets/showcase/).
 All README images are local files; no image-hosting service is required.

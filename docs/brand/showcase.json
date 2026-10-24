@@ -1,0 +1,83 @@
+{
+  "notice": "AI-generated concept illustrations, not app screenshots, anatomical references, or recorded neural data.",
+  "size": [1600, 900],
+  "features": [
+    {
+      "id": "habitat",
+      "kind": "Exhibit view",
+      "title": "Habitat",
+      "caption": "An engineered light cue. Neural output changes heading.",
+      "alt": "Concept illustration of a fruit fly and an amber target inside a circular glass habitat."
+    },
+    {
+      "id": "macro",
+      "kind": "Exhibit view",
+      "title": "Macro",
+      "caption": "A closer look at the procedural specimen.",
+      "alt": "Concept illustration of an amber compound eye, bristles, and translucent wing veins."
+    },
+    {
+      "id": "brain",
+      "kind": "Exhibit view",
+      "title": "Brain",
+      "caption": "The app displays real cell locations and measured spikes.",
+      "alt": "Conceptual insect neural constellation, not actual connectome geometry or recorded spikes."
+    },
+    {
+      "id": "orchard",
+      "kind": "Field simulation",
+      "scenario": "orchard",
+      "title": "Windfall orchard",
+      "caption": "Four fruit patches. Proximity and dwell determine visits.",
+      "alt": "Concept illustration of a fruit fly approaching fallen fruit on a dark orchard floor."
+    },
+    {
+      "id": "scent",
+      "kind": "Field simulation",
+      "scenario": "plume",
+      "title": "Follow the scent",
+      "caption": "Engineered plume gradients and an upwind cue.",
+      "alt": "Concept illustration of a fly facing a visibly illustrated amber scent plume from fruit."
+    },
+    {
+      "id": "spider",
+      "kind": "Field simulation",
+      "scenario": "spider",
+      "title": "Spider escape",
+      "caption": "A scripted pursuit. Measured escapes and close contacts.",
+      "alt": "Concept illustration of a fruit fly moving away from an approaching spider in leaf litter."
+    },
+    {
+      "id": "picnic",
+      "kind": "Field simulation",
+      "scenario": "picnic",
+      "title": "Dangerous picnic",
+      "caption": "Food guidance switches to avoidance near the swatter.",
+      "alt": "Concept illustration of a fruit fly, picnic fruit, and a looming fly swatter before contact."
+    },
+    {
+      "id": "stones",
+      "kind": "Field simulation",
+      "scenario": "maze",
+      "title": "Between the stones",
+      "caption": "Preselected waypoints and physical obstacle boundaries.",
+      "alt": "Concept illustration of a fruit fly between stones with a symbolic engineered waypoint route."
+    },
+    {
+      "id": "gusts",
+      "kind": "Field simulation",
+      "scenario": "wind",
+      "title": "Weather the gusts",
+      "caption": "External wind moves the body. Leaf shelters reduce it.",
+      "alt": "Concept illustration of a fly beneath a leaf while windblown particles pass outside."
+    },
+    {
+      "id": "porch",
+      "kind": "Field simulation",
+      "scenario": "porch",
+      "title": "Midnight porch",
+      "caption": "Two warm lamps. Engineered location-bearing guidance.",
+      "alt": "Concept illustration of a fruit fly and two warm lamps above moonlit wooden boards."
+    }
+  ]
+}
