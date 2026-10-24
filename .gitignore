@@ -1,0 +1,14 @@
+node_modules/
+dist/
+__pycache__/
+.venv/
+artifacts/
+*.log
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.npz
+fly-data/
+.DS_Store

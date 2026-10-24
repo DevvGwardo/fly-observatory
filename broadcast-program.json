@@ -1,0 +1,101 @@
+{
+  "name": "A brain. In the loop.",
+  "phases": [
+    {
+      "id": "signal", "label": "Follow the light", "view": "habitat", "duration": 14,
+      "mode": "seek", "muted": false, "target": "fixed", "point": [3, 2], "reset": true,
+      "title": "A signal becomes a turn.",
+      "caption": "The angle to the light enters a real connectome. A trained decoder turns descending-neuron activity into steering."
+    },
+    {
+      "id": "specimen", "label": "Meet the specimen", "view": "macro", "duration": 14,
+      "mode": "seek", "muted": false, "target": "orbit", "reset": false,
+      "title": "Small body. Visible consequences.",
+      "caption": "Compound eyes, wing veins, bristles, six legs. The body and gait are illustrations; heading comes from neural output."
+    },
+    {
+      "id": "wiring", "label": "Inside the network", "view": "brain", "duration": 16,
+      "mode": "seek", "muted": false, "target": "orbit", "reset": false,
+      "title": "166,700 neurons. In the loop.",
+      "caption": "These are recorded cell locations, including the ventral cord. Bright amber points are measured spike events, not decorative pulses."
+    },
+    {
+      "id": "orchard", "label": "Windfall orchard", "scenario": "orchard", "view": "habitat", "duration": 28,
+      "mode": "seek", "muted": false, "target": "fixed", "reset": true,
+      "title": "Lunch is somewhere in the orchard.",
+      "caption": "Visit fallen-fruit patches. Each reward requires measured time near the food. Food-location and obstacle cues are engineered; neural activity still produces the turn."
+    },
+    {
+      "id": "plume", "label": "Follow the scent", "scenario": "plume", "view": "habitat", "duration": 26,
+      "mode": "seek", "muted": false, "target": "fixed", "reset": true,
+      "title": "A scent trail. Not a straight line.",
+      "caption": "A simulated odor plume drifts downwind. Local concentration samples and a wind cue supply the bearing, without reading the food's direction. This is an engineered sensory adapter."
+    },
+    {
+      "id": "spider", "label": "Spider escape", "scenario": "spider", "view": "habitat", "duration": 22,
+      "mode": "evade", "muted": false, "target": "fixed", "reset": true,
+      "title": "Eight legs. One urgent decision.",
+      "caption": "An engineered spider pursues the body. Threat proximity supplies an escape cue to the frozen neural controller. Contacts and exits from the danger zone are measured, not scripted victories."
+    },
+    {
+      "id": "picnic", "label": "The dangerous picnic", "scenario": "picnic", "view": "habitat", "duration": 26,
+      "mode": "seek", "muted": false, "target": "fixed", "reset": true,
+      "title": "The food is good. The company isn't.",
+      "caption": "Forage between picnic scraps while a swatter crosses the table. The engineered adapter prioritizes escape when the threat is near. This is not retinal vision or natural decision-making."
+    },
+    {
+      "id": "maze", "label": "Between the stones", "scenario": "maze", "view": "habitat", "duration": 26,
+      "mode": "seek", "muted": false, "target": "fixed", "reset": true,
+      "title": "Dinner. On the other side of the rubble.",
+      "caption": "Preselected route waypoints and short-range obstacle cues feed the same trained decoder through the real connectome. The route is engineered, not planned by the fly. Collision physics never manufactures a turn."
+    },
+    {
+      "id": "wind", "label": "Weather the gusts", "scenario": "wind", "view": "habitat", "duration": 24,
+      "mode": "seek", "muted": false, "target": "fixed", "reset": true,
+      "title": "The world pushes back.",
+      "caption": "Gusts physically displace the body. Leaf shelters reduce that force. The neural controller responds to the changed position; these wind and shelter rules are illustrative, not validated biomechanics."
+    },
+    {
+      "id": "porch", "label": "The midnight porch", "scenario": "porch", "view": "habitat", "duration": 24,
+      "mode": "seek", "muted": false, "target": "fixed", "reset": true,
+      "title": "Two warm lights. A very small traveler.",
+      "caption": "A moonlit porch replaces the laboratory. Visit both lamps using engineered location bearings. Atmospheric lighting is illustrative; it does not enter the brain as retinal pixels."
+    },
+    {
+      "id": "retarget", "label": "Change the target", "view": "habitat", "duration": 18,
+      "mode": "seek", "muted": false, "target": "retarget", "reset": false,
+      "title": "Move the goal. Watch the response.",
+      "caption": "The light changes position every six numerical seconds. The same frozen network and decoder respond, without a fallback steering script."
+    },
+    {
+      "id": "evade", "label": "Reverse the task", "view": "habitat", "duration": 7,
+      "mode": "evade", "muted": false, "target": "fixed", "point": [3, 2], "reset": true,
+      "title": "The same brain. A different task.",
+      "caption": "The engineered adapter reverses the desired bearing. The network and decoder stay unchanged while the body turns away."
+    },
+    {
+      "id": "control", "label": "Brain-off control", "view": "habitat", "duration": 8,
+      "mode": "seek", "muted": true, "target": "fixed", "point": [3, 2], "reset": true,
+      "title": "Take neural steering away.",
+      "caption": "Identical starting body and target. Neural activity and turn commands are suppressed. Forward speed remains, but heading cannot change."
+    },
+    {
+      "id": "restore", "label": "Restore neural output", "view": "habitat", "duration": 10,
+      "mode": "seek", "muted": false, "target": "fixed", "point": [3, 2], "reset": true,
+      "title": "Put the network back in the loop.",
+      "caption": "Reset to the same starting body and target. Restore neural output. Watch steering return and the fly approach the light."
+    },
+    {
+      "id": "limits", "label": "Real wiring, honest limits", "view": "brain", "duration": 14,
+      "mode": "seek", "muted": false, "target": "orbit", "reset": false,
+      "title": "Real wiring. Honest boundaries.",
+      "caption": "A simplified LIF reservoir with a trained task decoder. This does not establish innate phototaxis, consciousness, or an advantage over shuffled wiring."
+    },
+    {
+      "id": "encore", "label": "A closer look", "view": "macro", "duration": 13,
+      "mode": "seek", "muted": false, "target": "orbit", "reset": false,
+      "title": "A little nervous system. Live.",
+      "caption": "The exhibit keeps running and repeats automatically. Every activity measurement comes from the live simulation."
+    }
+  ]
+}

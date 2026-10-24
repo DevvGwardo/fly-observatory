@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a1115" />
+    <meta name="description" content="An interactive, live full-connectome fly-brain exhibit. Move a light. Watch neural activity become movement." />
+    <title>Fly Observatory — a brain, embodied.</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="masthead">
+        <a class="wordmark" href="/" aria-label="Fly Observatory home"><span class="brand-symbol">◈</span> FLY <span>OBSERVATORY</span></a>
+        <div class="edition">LIVING SYSTEMS / EXHIBIT 001</div>
+        <div class="connection" id="connection"><i></i><span>CONNECTING</span></div>
+      </header>
+      <main>
+        <section class="introduction">
+          <div><p class="eyebrow">DROSOPHILA MELANOGASTER · MALECNS v1.0</p><h1>A brain.<br /><em>In the loop.</em></h1></div>
+          <div class="intro-note"><p>Move the light.<br />Watch the nervous system answer.</p><span>A real connectome, a simulated body,<br />and a task adapter you can inspect.</span></div>
+        </section>
+        <section class="exhibit" aria-label="Interactive fly-brain exhibit">
+          <div class="stage-wrap">
+            <div class="stage-top"><div class="stage-caption"><i></i><span id="stage-title">THE HABITAT</span><span class="stage-index">01 / 03</span></div><div class="view-switch" role="group" aria-label="Exhibit view"><button id="habitat-view" class="selected" aria-pressed="true">Habitat</button><button id="specimen-view" aria-pressed="false">Macro</button><button id="brain-view" aria-pressed="false">Brain</button></div></div>
+            <div id="stage" role="img" aria-label="3D fly habitat. Use the move-light button or arrow keys to position the target. Drag to orbit the camera."></div>
+            <div class="stage-label left"><span id="specimen-name">D. MELANOGASTER</span><small id="specimen-description">PROCEDURAL SPECIMEN · 6 LEGS · 2 WINGS</small></div>
+            <div class="stage-label right"><span id="target-label">LIGHT STIMULUS</span><small id="target-description">AMBER / INPUT</small></div>
+            <div class="stage-bottom"><span id="stage-hint">DRAG TO ORBIT · CLICK THE FLOOR TO MOVE THE LIGHT</span><button id="camera-reset" title="Reset the camera">Reset view ↗</button></div>
+            <div id="loading" class="loading"><div class="loading-ring"></div><p id="loading-message">Loading the connectome</p><small>Real activity only. No simulated fallback.</small></div>
+            <div class="broadcast-caption" id="broadcast-caption" aria-live="polite" hidden>
+              <p id="broadcast-chapter">THE LIVE EXPERIMENT</p>
+              <h2 id="broadcast-title">A brain.<br /><em>In the loop.</em></h2>
+              <p id="broadcast-description">Waiting for the live connectome.</p>
+              <span id="broadcast-reset" hidden>TRIAL RESET · IDENTICAL STARTING BODY</span>
+            </div>
+            <div class="broadcast-health" id="broadcast-health" role="status" hidden>Connecting to the live simulation.</div>
+            <div class="field-overlay" id="field-overlay" hidden>
+              <div><span id="field-name">FIELD SIMULATION</span><b id="field-score">0 PTS</b></div>
+              <p id="field-objective"></p><span id="field-stats"></span>
+              <small id="field-adapter"></small><span id="field-event" role="status" hidden></span>
+            </div>
+          </div>
+          <aside class="console">
+            <div class="console-heading"><span>THE EXPERIMENT</span><span class="tiny-cross">+</span></div>
+            <h2 id="task-heading">Follow the light.</h2>
+            <p class="task-description" id="task-description">A target becomes a neural stimulus. Descending-neuron activity becomes a turn.</p>
+            <label class="scenario-choice">FIELD SIMULATION<select id="scenario-select" aria-label="Field simulation"></select></label>
+            <p id="scenario-summary">Choose a real-world-inspired scenario.</p>
+            <div class="task-tabs" role="group" aria-label="Behavior task"><button class="selected" data-task="seek" aria-pressed="true">01 Seek</button><button data-task="evade" aria-pressed="false">02 Evade</button></div>
+            <div class="signal-chain"><div><span>01</span> TASK BEARING <b id="bearing-value">—</b></div><i>↓</i><div><span>02</span> CONNECTOME <b id="rate-value">— Hz</b></div><i>↓</i><div><span>03</span> NEURAL TURN <b id="turn-value">—</b></div></div>
+            <div class="activity-heading"><span>LEFT / RIGHT POPULATION ACTIVITY</span><span>Hz</span></div>
+            <div class="activity-row"><span>L</span><div><i id="left-bar"></i></div><b id="left-value">—</b></div>
+            <div class="activity-row amber"><span>R</span><div><i id="right-bar"></i></div><b id="right-value">—</b></div>
+            <canvas id="scope" width="600" height="120" aria-label="Live measured neural activity history"></canvas>
+            <div class="scope-label"><span>MEASURED, NOT DECORATIVE</span><span id="sample-clock">t = 0.00 s</span></div>
+            <div class="control-row"><button id="pause">Pause</button><button id="reset">Restart</button><button id="move-light">Move light ↗</button></div>
+            <label class="toggle-row"><span>Moving target <small>Continuous tracking challenge</small></span><input id="automatic" type="checkbox" checked /><i></i></label>
+            <label class="toggle-row brain-toggle"><span>Brain output <small id="brain-control-note">On · turn comes from the decoder</small></span><input id="brain-output" type="checkbox" checked /><i></i></label>
+            <label class="toggle-row"><span>Auto director <small>Experiments and cameras loop hands-free</small></span><input id="broadcast-automatic" type="checkbox" /><i></i></label>
+            <a class="stream-link" href="/stream">Open broadcast view ↗</a>
+            <p class="ablation-note">Switch the brain off. The body still advances, but it cannot turn toward the target.</p>
+            <div id="control-error" role="alert"></div>
+          </aside>
+          <aside class="broadcast-panel" id="broadcast-panel" aria-label="Live broadcast measurements" hidden>
+            <div class="broadcast-panel-heading"><span>LIVE TELEMETRY</span><span id="broadcast-cycle">CYCLE 001</span></div>
+            <div class="broadcast-population"><span>NEURONS SIMULATED</span><strong>166,700</strong><small>25,582,938 signed connections</small></div>
+            <div class="broadcast-signal"><span>POPULATION ACTIVITY</span><strong><span id="broadcast-rate">—</span><em>Hz</em></strong><span id="broadcast-spikes">Waiting for measured spikes</span></div>
+            <canvas id="broadcast-scope" width="600" height="180" aria-label="Live measured population activity, fixed zero to fifty Hz scale"></canvas>
+            <div class="broadcast-scope-legend"><span><i></i> LEFT</span><span><i></i> RIGHT</span><span>0–50 Hz</span></div>
+            <div class="broadcast-readout"><div><span>NEURAL TURN</span><b id="broadcast-turn">—</b></div><div><span>TARGET DISTANCE</span><b id="broadcast-distance">—</b></div><div><span>OUTPUT</span><b id="broadcast-output">WAITING</b></div></div>
+            <div class="broadcast-program-heading"><span>THE AUTOMATIC PROGRAM</span><span id="broadcast-countdown">—</span></div>
+            <ol id="broadcast-program"></ol>
+            <div class="broadcast-progress"><i id="broadcast-progress"></i></div>
+            <div class="broadcast-next"><span>NEXT UP</span><b id="broadcast-next">Waiting for the simulation</b></div>
+            <div class="broadcast-footnote"><span id="broadcast-test">DECODER TEST R² —</span><p>Independent task decoding.<br />Not a measure of biological intelligence.</p></div>
+          </aside>
+        </section>
+        <div class="broadcast-footer" id="broadcast-footer" hidden><span>MALECNS v1.0 · REAL WIRING</span><span>SIMPLIFIED LIF RESERVOIR · TRAINED STEERING DECODER · PROCEDURAL BODY</span><span id="broadcast-clock">NUMERICAL CLOCK / 00:00</span></div>
+        <nav class="broadcast-operator" id="broadcast-operator" aria-label="Broadcast controls" hidden><button id="broadcast-toggle">Start auto director</button><a href="/">Interactive view ↗</a><span>SPACE / PAUSE · D / AUTO</span></nav>
+        <section class="numbers" aria-label="Connectome measurements">
+          <div><span>NEURONS SIMULATED</span><strong id="neuron-count">166,700</strong><small>The complete stored network</small></div>
+          <div><span>SIGNED CONNECTIONS</span><strong id="synapse-count">25.58<em>M</em></strong><small>Excitation and inhibition retained</small></div>
+          <div><span>DECODER TEST R²</span><strong id="decoder-score">—</strong><small>Independent task signals, not behavior accuracy</small></div>
+          <div><span>TIME NEAR THE TARGET</span><strong id="acquired-time">0.0<em>s</em></strong><small>Measured within 1 world unit</small></div>
+        </section>
+        <section class="method">
+          <div><p class="eyebrow">THE IMPORTANT DISTINCTION</p><h2>Real wiring.<br /><em>Honest boundaries.</em></h2><button id="method-toggle" aria-expanded="false" aria-controls="method-details">Inside the experiment <span>+</span></button></div>
+          <div class="method-summary"><p>This is a connectome-driven controller, not a claim that a fly understands a game.</p><p>The network is frozen. A trained linear decoder translates its activity into steering. The body, speed, and task encoding are engineered.</p></div>
+          <div id="method-details" hidden>
+            <article><h3>What is real</h3><p>All 166,700 stored neurons and 25,582,938 signed connections run in a simplified leaky integrate-and-fire reservoir. Brain view shows a stable sample of 16,000 real recorded neuron coordinates. Bright points correspond to measured spikes.</p></article>
+            <article><h3>What is engineered</h3><p>The angle to the light and current turn velocity are encoded into cells wired to descending neurons. A ridge decoder is trained to reproduce a proportional-damping teacher. Seek and evade change the encoded task bearing. This is not retinal pixel vision or innate phototaxis.</p></article>
+            <article><h3>What this does not prove</h3><p>The brain-off control tests whether this controller uses its neural output. It does not show that biological wiring beats random wiring. That requires matched shuffled-network and no-brain controller benchmarks across seeds. We do not claim consciousness, learning inside the connectome, or biological fidelity.</p></article>
+            <article><h3>Timing and rendering</h3><p>The reservoir advances 20 ms per numerical step. Wall-clock playback may be slower. One clock serves every viewer. The detailed 3D body is procedural illustration, not a reconstruction. Coordinates preserve recorded relative geometry; the dataset is a whole nervous system, including the ventral cord.</p><p id="runtime-details">Waiting for the live simulator.</p></article>
+          </div>
+        </section>
+      </main>
+      <footer><span>FLY OBSERVATORY</span><span>SMALL BRAIN. VISIBLE CONSEQUENCES.</span><span>LOCAL / LIVE / INSPECTABLE</span></footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Fly Observatory mark</title>
+  <desc id="desc">A geometric two-winged fly inside an observation diamond, in mint and amber on charcoal.</desc>
+  <rect width="256" height="256" fill="#0b1216"/>
+  <path d="M128 21 235 128 128 235 21 128Z" fill="none" stroke="#395451" stroke-width="2"/>
+  <path d="M128 36V53M128 203V220M36 128H53M203 128H220" fill="none" stroke="#8cddcd" stroke-width="2"/>
+  <g fill="none" stroke="#8cddcd" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M119 113C99 78 65 76 68 102S99 147 118 145"/>
+    <path d="M137 113C157 78 191 76 188 102S157 147 138 145"/>
+    <path d="M119 111 101 101 96 75M137 111 155 101 160 75"/>
+    <path d="M116 132 94 132 77 151M140 132 162 132 179 151"/>
+    <path d="M119 151 105 165 101 184M137 151 151 165 155 184"/>
+  </g>
+  <ellipse cx="128" cy="139" rx="10" ry="34" fill="#8cddcd"/>
+  <path d="M120 150H136M122 161H134" stroke="#0b1216" stroke-width="3"/>
+  <circle cx="128" cy="95" r="12" fill="#edb973"/>
+  <path d="M122 84 116 73M134 84 140 73" stroke="#edb973" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="128" cy="21" r="4" fill="#edb973"/>
+  <circle cx="128" cy="235" r="4" fill="#8cddcd"/>
+</svg>

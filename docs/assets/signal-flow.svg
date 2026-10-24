@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1120" viewBox="0 0 1440 1120" role="img" aria-labelledby="title desc">
+  <title id="title">Fly Observatory: from cue to movement</title>
+  <desc id="desc">Engineered task bearing and angular velocity enter a fixed encoder, then a frozen signed connectome with 166,700 neurons and 25,582,938 synapses. Descending activity feeds a trained ridge decoder, whose output turns a simulated body. Body state feeds back into the task cue. Population spikes, sampled neuron coordinates, and decoder scores are measured; body, sensors, scenery, and rewards are engineered. This is not a validated model of natural fly behavior.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="m1 1 6 3-6 3" fill="none" stroke="#8cddcd" stroke-width="2"/>
+    </marker>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#1c2b31" stroke-width="1"/>
+    </pattern>
+    <style>
+      text{fill:#e7ede9;font-family:Arial,Helvetica,sans-serif}
+      .label{font-family:'Courier New',monospace;font-size:18px;letter-spacing:1px;fill:#8cddcd}
+      .stage{font-size:30px;font-weight:700}
+      .main{font-size:25px}
+      .detail{font-size:22px;fill:#a9bdbe}
+      .muted{fill:#a9bdbe}
+      .mint{fill:#8cddcd}
+      .amber{fill:#edb973}
+      .serif{font-family:Georgia,'Times New Roman',serif}
+    </style>
+  </defs>
+  <rect width="1440" height="1120" fill="#0b1216"/>
+  <rect width="1440" height="660" fill="url(#grid)" opacity=".45"/>
+  <path d="M64 44H1376" stroke="#395451"/>
+  <text class="label" x="64" y="84">FLY OBSERVATORY / THE CONTROL LOOP</text>
+  <text class="serif" x="64" y="157" font-size="65">From cue to movement.</text>
+  <text class="main muted" x="64" y="202">Real connectome activity. Explicit engineered adapters.</text>
+  <text class="label muted" x="1376" y="84" text-anchor="end">MODEL / 01</text>
+
+  <g fill="#101a20" stroke="#395451">
+    <rect x="64" y="248" width="304" height="298"/>
+    <rect x="400" y="248" width="304" height="298" stroke="#8cddcd"/>
+    <rect x="736" y="248" width="304" height="298" stroke="#edb973"/>
+    <rect x="1072" y="248" width="304" height="298"/>
+  </g>
+  <g fill="none" stroke="#8cddcd" stroke-width="2" marker-end="url(#arrow)">
+    <path d="M371 385H395"/>
+    <path d="M707 385H731"/>
+    <path d="M1043 385H1067"/>
+    <path d="M1224 549V612H216V549"/>
+  </g>
+  <g>
+    <text class="label" x="86" y="284">ENGINEERED INPUT</text>
+    <text class="stage" x="86" y="329">01 / Task cue</text>
+    <text class="main" x="86" y="386">Task bearing</text>
+    <text class="main" x="86" y="422">+ angular velocity</text>
+    <text class="detail" x="86" y="483">Fixed, seeded encoder</text>
+    <text class="detail" x="86" y="517">Not retinal pixel vision</text>
+
+    <text class="label" x="422" y="284">REAL WIRING</text>
+    <text class="stage" x="422" y="329">02 / Reservoir</text>
+    <text class="main mint" x="422" y="386">166,700 neurons</text>
+    <text class="main" x="422" y="422">25,582,938 synapses</text>
+    <text class="detail" x="422" y="483">Simplified LIF dynamics</text>
+    <text class="detail" x="422" y="517">Frozen signed weights</text>
+
+    <text class="label amber" x="758" y="284">TRAINED READOUT</text>
+    <text class="stage" x="758" y="329">03 / Decoder</text>
+    <text class="main" x="758" y="386">Descending activity</text>
+    <text class="main" x="758" y="422">to steering command</text>
+    <text class="detail" x="758" y="483">Ridge fit to a teacher;</text>
+    <text class="detail" x="758" y="517">frozen during playback</text>
+
+    <text class="label" x="1094" y="284">SIMULATED BODY</text>
+    <text class="stage" x="1094" y="329">04 / Movement</text>
+    <text class="main" x="1094" y="386">Neural output turns</text>
+    <text class="main" x="1094" y="422">Fixed forward speed</text>
+    <text class="detail" x="1094" y="483">Wind + collisions</text>
+    <text class="detail" x="1094" y="517">change position only</text>
+  </g>
+  <rect x="489" y="594" width="462" height="36" fill="#0b1216"/>
+  <text class="detail mint" x="720" y="619" text-anchor="middle">Body state updates the task cue</text>
+
+  <text class="serif" x="64" y="707" font-size="42">What you can observe.</text>
+  <rect x="64" y="743" width="644" height="240" fill="#101a20" stroke="#395451"/>
+  <rect x="732" y="743" width="644" height="240" fill="#101a20" stroke="#395451"/>
+  <path d="M64 743H708" stroke="#8cddcd" stroke-width="3"/>
+  <path d="M732 743H1376" stroke="#edb973" stroke-width="3"/>
+  <text class="label" x="92" y="789">MEASURED / FROM THE SIMULATION</text>
+  <text class="main" x="92" y="841">Population spike rates</text>
+  <text class="main" x="92" y="885">16,000 sampled real neuron locations</text>
+  <text class="main" x="92" y="929">Independent decoder test R²</text>
+  <text class="label amber" x="760" y="789">ENGINEERED / NOT BIOLOGICAL CLAIMS</text>
+  <text class="main" x="760" y="841">Body, gait, sensors + scenery</text>
+  <text class="main" x="760" y="885">Game objectives + rewards</text>
+  <text class="main" x="760" y="929">Not validated natural fly behavior</text>
+  <path d="M64 1024H1376" stroke="#395451"/>
+  <text class="detail" x="64" y="1064">Real wiring does not, by itself, establish a biological-wiring advantage.</text>
+  <text class="muted" x="64" y="1094" font-size="18">Schematic overview, not a recording of a specific run. See README scientific boundaries.</text>
+</svg>
